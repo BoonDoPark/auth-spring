@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: auth
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_test?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    password: 1234
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+
+
+jwt:
+  secret: fjni2kasj24kjvfkjgjk535kjjkgkjb3kknvnknvnsnasdadsads
+  expiration: 25920000
+
+# 배포 info
+logging:
+  level:
+    org.springframework.security: true
+    com.example.auth: error
